@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "browser-sync src --watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "prettier": "^2.5.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}
