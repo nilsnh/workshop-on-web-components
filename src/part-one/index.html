@@ -6,8 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Part One - Web Components Workshop</title>
     <script type="module" src="/index.mjs" async></script>
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
+    />
   </head>
   <body>
-    <h1>Part one</h1>
+    <h1>Part One: Welcome to Eagleton labs</h1>
+    <p>
+      Hello dear, inventor-in-training. In this here lab we research and build
+      web components to be used by the folks upstairs. If you do good work here
+      you might one day get to meet them.
+    </p>
+    <p>
+      Here's your workstation and back there that's the coffee machine. Oh, when
+      it was cleaned last? I don't know, do machines like that need cleaning?
+    </p>
+    <p>Nevermind.</p>
+    <p>
+      As you can see there's already a stack of requests on your desk for
+      various web components that the upstairsfolk need to be crafted. Here's
+      your complementary company mug for your coffee imbibement. I won't close
+      the door on my way out so the airdraft can circulate away some of that
+      mold smell. Best of luck with your work!
+    </p>
+    <section class="learnable">
+      <h2>The anti-styling barrier</h2>
+      <p>
+        Hi, it's Greg from accounts. I am in need of a font-style component that
+        would prevent my colleagues from overriding my text styling with their
+        CSS !important rules. They say I'm not a designer and should not be
+        specifying font-styles but why can't accountants be allowed to add some
+        extra flair to their text?
+      </p>
+      <p>
+        Attached below you can see an example of the styling that my colleagues
+        use to supress my creative juices. Please build me a web component that
+        will style and protect my precious text.
+      </p>
+      <style>
+        .creativity-blocker {
+          border: 1px solid #ccc;
+          padding: 12px;
+        }
+        .creativity-blocker p {
+          font-family: serif !important;
+        }
+      </style>
+      <div class="creativity-blocker">
+        <p style="font-family: fantasy">
+          Here's some text that I'd wish would have some extra flair! But it
+          didn't help putting style attributes directly on the paragraph. And I
+          cannot touch the actual CSS that we have.
+        </p>
+        <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
+      </div>
+    </section>
   </body>
 </html>
