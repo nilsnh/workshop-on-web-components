@@ -2,8 +2,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  max-width: 800px;
+  font-size: 2rem;
+  max-width: 80rem;
   margin: 0 auto;
-  padding: 0 14px;
+  padding: 0 1.4rem;
 }
