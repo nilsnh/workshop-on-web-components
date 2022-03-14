@@ -15,9 +15,9 @@
   <body>
     <h1>Part One: Welcome to Eagleton labs</h1>
     <p>
-      Hello dear, inventor-in-training. In this here lab we research and build
-      web components to be used by the folks upstairs. If you do good work here
-      you might one day get to meet them.
+      Hello, dear inventor-in-training. In this lab we research and build web
+      components to be used by the folks upstairs. If you do good work you might
+      one day get to meet them.
     </p>
     <p>
       Here's your workstation and back there that's the coffee machine. Oh, when
@@ -51,15 +51,26 @@
           padding: 12px;
         }
         .creativity-blocker p {
-          font-family: serif !important;
+          font-family: sans-serif !important;
         }
       </style>
       <div class="creativity-blocker">
-        <p style="font-family: fantasy">
-          Here's some text that I'd wish would have some extra flair! But it
-          didn't help putting style attributes directly on the paragraph. And I
-          cannot touch the actual CSS that we have.
-        </p>
+        <creativity-protector>
+          <style>
+            p {
+              font-family: cursive;
+            }
+          </style>
+          <p>
+            Here's some text that I'd wish would have some extra flair! But it
+            didn't help putting style attributes directly on the paragraph. And
+            I cannot touch the actual CSS that we have.
+          </p>
+        </creativity-protector>
+        <script type="module">
+          import { CreativityProtector } from '/part-one/solution-creativity-protector.mjs'
+          customElements.define('creativity-protector', CreativityProtector)
+        </script>
         <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
       </div>
     </section>
