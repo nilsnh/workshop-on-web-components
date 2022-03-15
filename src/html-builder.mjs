@@ -4,7 +4,7 @@ export const cr = (...args) => {
   restOfArgs.forEach((arg) => {
     if (arg instanceof Element) {
       newElement.appendChild(arg)
-    } else if (typeof arg === 'string') {
+    } else if (typeof arg === 'string' || typeof arg === 'number') {
       newElement.appendChild(document.createTextNode(arg))
     } else if (typeof arg === 'object') {
       Object.entries(arg).forEach(([key, val]) => {
