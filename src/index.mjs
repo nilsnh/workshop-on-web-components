@@ -1,3 +1,3 @@
-import { MyHeader } from '/components/my-header.mjs'
+import { SiteMenu } from '/components/site-menu.mjs'
 
-customElements.define('my-header', MyHeader)
+customElements.define('site-menu', SiteMenu)

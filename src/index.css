@@ -12,3 +12,9 @@ body {
   margin: 0 auto;
   padding: 0 1.4rem;
 }
+
+/* Prevent "jumpy" UI when component is loading. */
+site-menu {
+  display: block;
+  min-height: 8rem;
+}
