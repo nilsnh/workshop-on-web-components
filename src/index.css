@@ -11,6 +11,7 @@ body {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1.4rem;
+  margin-bottom: 50vh;
 }
 
 /* Prevent "jumpy" UI when component is loading. */
