@@ -14,122 +14,127 @@
   </head>
   <body>
     <site-menu></site-menu>
-    <h1>Part One: Welcome to Eagleton labs</h1>
-    <p>
-      Hello, dear inventor-in-training. In this lab we research and build web
-      components to be used by the folks upstairs. If you do good work you might
-      one day get to meet them.
-    </p>
-    <p>
-      Here's your workstation and back there that's the coffee machine. Oh, when
-      it was cleaned last? I don't know, do machines like that need cleaning?
-    </p>
-    <p>Nevermind.</p>
-    <p>
-      As you can see there's already a stack of requests on your desk for
-      various web components that the upstairsfolk need to be crafted. Here's
-      your complementary company mug for your coffee imbibement. I won't close
-      the door on my way out so the airdraft can circulate away some of that
-      mold smell. Best of luck with your work!
-    </p>
-    <section class="learnable">
-      <h2>The name plate</h2>
+    <main>
+      <h1>Part One: Welcome to Eagleton labs</h1>
       <p>
-        Yes, this assignment is from me, your boss that just left out the door.
+        Hello, dear inventor-in-training. In this lab we research and build web
+        components to be used by the folks upstairs. If you do good work you
+        might one day get to meet them.
       </p>
       <p>
-        I noticed that there is no name plate on your door, nor on your desk.
-        Could you please fashion yourself a web-component with your name and
-        place it on your desk?
+        Here's your workstation and back there that's the coffee machine. Oh,
+        when it was cleaned last? I don't know, do machines like that need
+        cleaning?
       </p>
-      <script>
-        // Create and define a web component here for a <name-plate></name-plate>
-        // component. You can start by defining the component here and then
-        // moving it into its own file.
-      </script>
-      <style>
-        .your-desk {
-          max-width: 300px;
-          border: 1px solid black;
-          padding: 8px;
-        }
-      </style>
-      <div class="your-desk">
-        <h3>Your desk:</h3>
-        <!-- Where you can insert  -->
-      </div>
-    </section>
-    <section class="learnable">
-      <h2>The misplaced slide-clicker</h2>
+      <p>Nevermind.</p>
       <p>
-        Hi, it's Wanda from the backend engineering department. We seem to have
-        misplaced the code for advancing our web-based powerpoint
-        implementation. As it stands we're unable to move any of our
-        presentations beyond the first slide.
+        As you can see there's already a stack of requests on your desk for
+        various web components that the upstairsfolk need to be crafted. Here's
+        your complementary company mug for your coffee imbibement. I won't close
+        the door on my way out so the airdraft can circulate away some of that
+        mold smell. Best of luck with your work!
       </p>
-      <p>
-        Normally, we would have built this ourselves but our draconic company
-        policy prevents backend developers and frontend developers from working
-        on each other's domain of expertise. I damn near had to smuggle this
-        message to you on a paperplane.
-      </p>
-      <p>
-        So, what we need from you is a slide-clicker component that can dispatch
-        events to our "powerpointer-3000" machine. Attached to this letter
-        you'll find a floppy disk with a copy of the powerpointer code. Good
-        luck!
-      </p>
-      <powerpointer-3000></powerpointer-3000>
-      <powerpointer-clicker>Advance slides</powerpointer-clicker>
-      <script type="module">
-        import { Powerpointer3000 } from '/components/powerpointer-3000.mjs'
-        import { PowerpointerClicker } from '/_solutions/powerpointer-clicker.mjs'
-        customElements.define('powerpointer-3000', Powerpointer3000)
-        customElements.define('powerpointer-clicker', PowerpointerClicker)
-      </script>
-    </section>
-    <section class="learnable">
-      <h2>The creativity protector</h2>
-      <p>
-        Hi, it's Greg from accounts. I am in need of a font-style component that
-        would prevent my colleagues from overriding my text styling with their
-        CSS !important rules. They say I'm not a designer and should not be
-        specifying font-styles but why can't accountants be allowed to add some
-        extra flair to their text?
-      </p>
-      <p>
-        Attached below you can see an example of the styling that my colleagues
-        use to supress my creative juices. Please build me a web component that
-        will style and protect my precious text.
-      </p>
-      <style>
-        .creativity-blocker {
-          border: 1px solid #ccc;
-          padding: 12px;
-        }
-        .creativity-blocker p {
-          font-family: sans-serif !important;
-        }
-      </style>
-      <div class="creativity-blocker">
-        <creativity-protector>
-          <style>
-            p {
-              font-family: cursive;
-            }
-          </style>
-          <p>
-            Here's some text that I'd wish would have some extra flair! But it
-            didn't help putting style attributes directly on the paragraph. And
-            I cannot touch the actual CSS that we have.
-          </p>
-        </creativity-protector>
-        <script type="module">
-          import { CreativityProtector } from '/_solutions/solution-creativity-protector.mjs'
-          customElements.define('creativity-protector', CreativityProtector)
+      <section class="learnable">
+        <h2>The name plate</h2>
+        <p>
+          Yes, this assignment is from me, your boss that just left out the
+          door.
+        </p>
+        <p>
+          I noticed that there is no name plate on your door, nor on your desk.
+          Could you please fashion yourself a web-component with your name and
+          place it on your desk?
+        </p>
+        <script>
+          // Create and define a web component here for a <name-plate></name-plate>
+          // component. You can start by defining the component here and then
+          // moving it into its own file.
         </script>
-        <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
-      </div>
-    </section>
+        <style>
+          .your-desk {
+            max-width: 300px;
+            border: 1px solid black;
+            padding: 8px;
+          }
+        </style>
+        <div class="your-desk">
+          <h3>Your desk:</h3>
+          <!-- Where you can insert  -->
+        </div>
+      </section>
+      <section class="learnable">
+        <h2>The misplaced slide-clicker</h2>
+        <p>
+          Hi, it's Wanda from the backend engineering department. We seem to
+          have misplaced the code for advancing our web-based powerpoint
+          implementation. As it stands we're unable to move any of our
+          presentations beyond the first slide.
+        </p>
+        <p>
+          Normally, we would have built this ourselves but our draconic company
+          policy prevents backend developers and frontend developers from
+          working on each other's domain of expertise. I damn near had to
+          smuggle this message to you on a paperplane.
+        </p>
+        <p>
+          So, what we need from you is a slide-clicker component that can
+          dispatch events to our "powerpointer-3000" machine. Attached to this
+          letter you'll find a floppy disk with a copy of the powerpointer code.
+          Good luck!
+        </p>
+        <powerpointer-3000></powerpointer-3000>
+        <powerpointer-clicker>Advance slides</powerpointer-clicker>
+        <script type="module">
+          import { Powerpointer3000 } from '/components/powerpointer-3000.mjs'
+          import { PowerpointerClicker } from '/_solutions/powerpointer-clicker.mjs'
+          customElements.define('powerpointer-3000', Powerpointer3000)
+          customElements.define('powerpointer-clicker', PowerpointerClicker)
+        </script>
+      </section>
+      <section class="learnable">
+        <h2>The creativity protector</h2>
+        <p>
+          Hi, it's Greg from accounts. I am in need of a font-style component
+          that would prevent my colleagues from overriding my text styling with
+          their CSS !important rules. They say I'm not a designer and should not
+          be specifying font-styles but why can't accountants be allowed to add
+          some extra flair to their text?
+        </p>
+        <p>
+          Attached below you can see an example of the styling that my
+          colleagues use to supress my creative juices. Please build me a web
+          component that will style and protect my precious text.
+        </p>
+        <style>
+          .creativity-blocker {
+            border: 1px solid #ccc;
+            padding: 12px;
+          }
+          .creativity-blocker p {
+            font-family: sans-serif !important;
+          }
+        </style>
+        <div class="creativity-blocker">
+          <creativity-protector>
+            <style>
+              p {
+                font-family: cursive;
+              }
+            </style>
+            <p>
+              Here's some text that I'd wish would have some extra flair! But it
+              didn't help putting style attributes directly on the paragraph.
+              And I cannot touch the actual CSS that we have.
+            </p>
+          </creativity-protector>
+          <script type="module">
+            import { CreativityProtector } from '/_solutions/solution-creativity-protector.mjs'
+            customElements.define('creativity-protector', CreativityProtector)
+          </script>
+          <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
+        </div>
+      </section>
+    </main>
+    <site-footer></site-footer>
   </body>
 </html>
