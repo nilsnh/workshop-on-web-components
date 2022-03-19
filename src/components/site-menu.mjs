@@ -28,7 +28,8 @@ export class SiteMenu extends HTMLElement {
               h('li', h('a', { href: '/' }, 'Home')),
               h('li', h('a', { href: '/part-1.html' }, 'Part one')),
               h('li', h('a', { href: '/part-2.html' }, 'Part two')),
-              h('li', h('a', { href: '/part-3.html' }, 'Part three'))
+              h('li', h('a', { href: '/part-3.html' }, 'Part three')),
+              h('li', h('a', { href: '/references.html' }, 'References'))
             )
           )
         )
