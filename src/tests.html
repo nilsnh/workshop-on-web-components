@@ -18,12 +18,15 @@
       <h1>Tests</h1>
       <script type="module">
         import { ExampleCounterReact } from '/components/example-counter-react.mjs'
-        import { ExampleCounterMithril } from '/components/example-counter-mithril.mjs'
         customElements.define('example-counter-react', ExampleCounterReact)
+        import { ExampleCounterMithril } from '/components/example-counter-mithril.mjs'
         customElements.define('example-counter-mithril', ExampleCounterMithril)
+        import { ExampleCounterVue } from '/components/example-counter-vue.mjs'
+        customElements.define('example-counter-vue', ExampleCounterVue)
       </script>
       <example-counter-react></example-counter-react>
       <example-counter-mithril></example-counter-mithril>
+      <example-counter-vue></example-counter-vue>
     </main>
     <site-footer></site-footer>
   </body>

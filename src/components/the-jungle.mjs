@@ -1,16 +1,4 @@
-import { cr } from '/html-builder.mjs'
-
-/**
- * This tagged template literal does nothing.
- * But Prettier sees it and will auto-format it's
- * content.
- *
- * See also:
- * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals}
- */
-const html = (str) => {
-  return str.join('')
-}
+import { cr, html } from '/html-builder.mjs'
 
 const template = document.createElement('template')
 

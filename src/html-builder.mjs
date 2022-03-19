@@ -1,4 +1,16 @@
 /**
+ * This tagged template literal does nothing.
+ * But Prettier sees it and will auto-format it's
+ * content.
+ *
+ * See also:
+ * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals}
+ */
+export const html = (str) => {
+  return str.join('')
+}
+
+/**
  * This 'cr' function is a tiny abstraction on the document.createElement()
  * function.
  *
