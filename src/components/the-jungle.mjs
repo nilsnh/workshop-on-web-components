@@ -41,24 +41,37 @@ export class TheJungle extends HTMLElement {
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.appendChild(template.content.cloneNode(true))
     this.jungleTicker = this.jungleTicker.bind(this)
+    this.animalEatsNode = this.animalEatsNode.bind(this)
     this.animalIndex = -1
   }
 
-  jungleTicker() {
-    const edibles = Array.from(this.querySelectorAll('input,button'))
-    edibles.forEach((edible) => {
-      this.animalIndex = this.animalIndex + 1
-      if (this.animalIndex > animals.length - 1) {
-        // Loop around
-        this.animalIndex = 0
-      }
-      edible.replaceWith(
-        cr(
-          'span',
-          `Wops! ${edible.tagName} was eaten by a ${animals[this.animalIndex]}`
-        )
+  animalEatsNode(node) {
+    this.animalIndex = this.animalIndex + 1
+    if (this.animalIndex > animals.length - 1) {
+      // Loop around
+      this.animalIndex = 0
+    }
+    node.replaceWith(
+      cr(
+        'p',
+        `Wops! ${node.tagName} was eaten by a ${animals[this.animalIndex]}`
       )
-    })
+    )
+  }
+
+  jungleTicker() {
+    const lookForEdibles = (nodes = []) => {
+      Array.from(nodes).forEach((node) => {
+        if (['BUTTON', 'INPUT'].includes(node.tagName)) {
+          this.animalEatsNode(node)
+        } else if (node.shadowRoot) {
+          lookForEdibles(node.shadowRoot.children)
+        } else {
+          lookForEdibles(node.children)
+        }
+      })
+    }
+    lookForEdibles(this.children)
   }
 
   connectedCallback() {

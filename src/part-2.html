@@ -43,13 +43,16 @@
 
       <script type="module">
         import { TheJungle } from '/components/the-jungle.mjs'
+        import { SignupForm } from '/_solutions/solution-signup-form.mjs'
         customElements.define('the-jungle', TheJungle)
+        customElements.define('signup-form', SignupForm)
       </script>
 
-      <the-jungle>
+      <the-jungle id="the-jungle">
         <p>Anything that goes into here will get palms on it.</p>
         <p>Try adding an input field or button, and it will be eaten up.</p>
         <!-- Any input fields or button fields added here will be eaten by the jungle. -->
+        <signup-form></signup-form>
       </the-jungle>
 
       <p>So, yeah it's quite bad. What I need you to make is this:</p>

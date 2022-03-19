@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "browser-sync src --watch --extensions html,css,mjs,js"
+    "start": "browser-sync src --watch --extensions html,css,mjs,js --no-inject-changes"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",
