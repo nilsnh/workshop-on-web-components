@@ -1,4 +1,6 @@
-# Workshop in Web Components
+# Weaving Web Components in a Bundler-Free World
+
+A workshop on how to use web components without a bundler.
 
 ## Getting started
 
