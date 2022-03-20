@@ -16,6 +16,16 @@
     <site-menu></site-menu>
     <main>
       <h1>Tests</h1>
+
+      <ul id="test-reporter"></ul>
+
+      <script>
+        function test(nameOfTest, funcThatMustReturnTrue) {
+          const li = document.createElement('li')
+          li.innerHTML = `<p>Testing ${nameOfTest}</p>`
+          window['test-reporter'].appendChild(li)
+        }
+      </script>
       <script type="module">
         import { ExampleCounterReact } from '/components/example-counter-react.mjs'
         customElements.define('example-counter-react', ExampleCounterReact)
