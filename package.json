@@ -2,6 +2,7 @@
   "scripts": {
     "start": "browser-sync src --watch --extensions html,css,mjs,js --no-inject-changes"
   },
+  "license": "CC-BY-SA-4.0",
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "prettier": "^2.5.1"
