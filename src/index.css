@@ -19,7 +19,7 @@ body {
 /* Prevent "jumpy" UI when component is loading. */
 site-menu {
   display: block;
-  min-height: 8rem;
+  min-height: 9rem;
 }
 
 site-footer {
