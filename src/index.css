@@ -28,6 +28,14 @@ site-footer {
   margin-top: 30rem;
 }
 
+/*
+Just demonstrating a neat trick where you can prevent all content
+from displaying until a particular web component has loaded.
+*/
+hide-until-loaded:not(:defined) {
+  display: none;
+}
+
 .figure {
   margin: 2rem;
 }
