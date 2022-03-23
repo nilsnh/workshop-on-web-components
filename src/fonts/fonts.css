@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Open Sans Variable';
+  font-weight: 300 800;
+  src: url('/fonts/Open_Sans/OpenSans-VariableFont.ttf') format('truetype');
+}
+
+html {
+  font-family: 'Open Sans Variable';
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans Variable';
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 7rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}

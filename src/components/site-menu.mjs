@@ -9,6 +9,10 @@ const css = `
   display: inline-block;
   margin-right: 1.6rem;
 }
+
+*:visited {
+  color: blue;
+}
 `
 
 export class SiteMenu extends HTMLElement {

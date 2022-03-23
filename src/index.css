@@ -1,3 +1,5 @@
+@import url('/fonts/fonts.css');
+
 * {
   box-sizing: border-box;
 }
@@ -22,20 +24,23 @@ site-menu {
 
 site-footer {
   display: block;
-  margin-top: 8rem;
-}
-
-main {
-  min-height: calc(70vh);
+  clear: both;
+  margin-top: 30rem;
 }
 
 .figure {
-  margin: 0;
+  margin: 2rem;
 }
 
 .figure--float-right {
-  float: right;
-  max-width: 270px;
+  max-width: 27rem;
+}
+
+@media (min-width: 67rem) {
+  .figure--float-right {
+    float: right;
+    max-width: 27rem;
+  }
 }
 
 .figure figcaption {
