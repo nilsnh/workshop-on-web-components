@@ -28,3 +28,16 @@ site-footer {
 main {
   min-height: calc(75vh);
 }
+
+.figure {
+  margin: 0;
+}
+
+.figure--float-right {
+  float: right;
+  max-width: 270px;
+}
+
+.figure figcaption {
+  font-size: 1.4rem;
+}
