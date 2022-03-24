@@ -112,19 +112,23 @@
         </p>
         <your-desk>
           <powerpointer-3000></powerpointer-3000>
-          <powerpointer-clicker>Advance slides</powerpointer-clicker>
         </your-desk>
         <script type="module">
           import { Powerpointer3000 } from '/components/powerpointer-3000.mjs'
-          import { PowerpointerClicker } from '/_solutions/powerpointer-clicker.mjs'
           customElements.define('powerpointer-3000', Powerpointer3000)
-          customElements.define('powerpointer-clicker', PowerpointerClicker)
         </script>
         <some-hints>
           <ul>
             <li>
               Search the codebase and have a peek at the source code of the
               powerpointer-3000.mjs file.
+            </li>
+            <li>
+              Here's how to
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events"
+                >create and dispatch custom events</a
+              >.
             </li>
           </ul>
         </some-hints>
@@ -143,29 +147,45 @@
           colleagues use to supress my creative juices. Please build me a web
           component that will style and protect my precious text.
         </p>
-        <style>
-          .creativity-blocker {
-            border: 1px solid #ccc;
-            padding: 12px;
-          }
-          .creativity-blocker p {
-            font-family: sans-serif !important;
-          }
-        </style>
-        <div class="creativity-blocker">
-          <creativity-protector>
+        <your-desk>
+          <style>
+            .creativity-blocker {
+              padding: 12px;
+            }
+            .creativity-blocker p {
+              font-family: sans-serif !important;
+            }
+          </style>
+          <div class="creativity-blocker">
             <p style="font-family: cursive">
               Here's some text that I'd wish would have some extra flair! But it
               didn't help putting style attributes directly on the paragraph.
               And I cannot touch the actual CSS that we have.
             </p>
-          </creativity-protector>
-          <script type="module">
-            import { CreativityProtector } from '/_solutions/solution-creativity-protector.mjs'
-            customElements.define('creativity-protector', CreativityProtector)
-          </script>
-          <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
-        </div>
+            <script type="module">
+              import { CreativityProtector } from '/_solutions/solution-creativity-protector.mjs'
+            </script>
+            <!-- Tip: You should create a web component that can wrap the text above so that they can get their creative juices unblocked. -->
+          </div>
+        </your-desk>
+
+        <some-hints>
+          <ul>
+            <li>
+              A web component can use the
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Slot"
+                >slot element</a
+              >
+              to display content it wraps inside it, but that's not useful here
+              because the host page's styling can still reach it.
+            </li>
+            <li>
+              Instead you should create some shadowDOM and copy the web
+              component's children into the shadowDOM.
+            </li>
+          </ul>
+        </some-hints>
       </section>
     </main>
     <site-footer></site-footer>
