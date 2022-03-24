@@ -32,6 +32,7 @@ export class SiteMenu extends HTMLElement {
             cr('li', cr('a', { href: '/part-1.html' }, 'Part one')),
             cr('li', cr('a', { href: '/part-2.html' }, 'Part two')),
             cr('li', cr('a', { href: '/part-3.html' }, 'Part three')),
+            cr('li', cr('a', { href: '/tests.html' }, 'Tests')),
             cr('li', cr('a', { href: '/references.html' }, 'References'))
           )
         )

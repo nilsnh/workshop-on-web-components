@@ -58,17 +58,33 @@
           // component. You can start by defining the component here and then
           // moving it into its own file.
         </script>
-        <style>
-          .your-desk {
-            max-width: 300px;
-            border: 1px solid black;
-            padding: 8px;
-          }
-        </style>
-        <div class="your-desk">
-          <h3>Your desk:</h3>
-          <!-- Where you can insert  -->
-        </div>
+        <your-desk>
+          <!-- This is where you can place the nameplate. -->
+        </your-desk>
+        <some-hints>
+          <ul>
+            <li>
+              Pop open this html page in your favorite editor, and have a look
+              at the HTML.
+            </li>
+            <li>
+              Use
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define"
+                >customElements.define()</a
+              >
+              to define new, nifty HTML tags.
+            </li>
+            <li>
+              In addition to console.log() be sure to familiarize yourself with
+              the trusty
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger"
+                >debugger statement</a
+              >.
+            </li>
+          </ul>
+        </some-hints>
       </section>
       <section class="learnable">
         <h2>The misplaced slide-clicker</h2>
@@ -90,14 +106,24 @@
           letter you'll find a floppy disk with a copy of the powerpointer code.
           Good luck!
         </p>
-        <powerpointer-3000></powerpointer-3000>
-        <powerpointer-clicker>Advance slides</powerpointer-clicker>
+        <your-desk>
+          <powerpointer-3000></powerpointer-3000>
+          <powerpointer-clicker>Advance slides</powerpointer-clicker>
+        </your-desk>
         <script type="module">
           import { Powerpointer3000 } from '/components/powerpointer-3000.mjs'
           import { PowerpointerClicker } from '/_solutions/powerpointer-clicker.mjs'
           customElements.define('powerpointer-3000', Powerpointer3000)
           customElements.define('powerpointer-clicker', PowerpointerClicker)
         </script>
+        <some-hints>
+          <ul>
+            <li>
+              Search the codebase and have a peek at the source code of the
+              powerpointer-3000.mjs file.
+            </li>
+          </ul>
+        </some-hints>
       </section>
       <section class="learnable">
         <h2>The creativity protector</h2>

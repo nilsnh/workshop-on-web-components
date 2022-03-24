@@ -24,15 +24,21 @@
           const li = document.createElement('li')
           li.innerHTML = `<p>Testing ${nameOfTest}</p>`
           window['test-reporter'].appendChild(li)
+          if (funcThatMustReturnTrue()) {
+            li.innerHTML = `<p>✅ ${nameOfTest}</p>`
+          } else {
+            li.innerHTML = `<p>💥 ${nameOfTest}</p>`
+          }
         }
       </script>
       <script type="module">
+        import { cr } from '/html-builder.mjs'
         import { ExampleCounterReact } from '/components/example-counter-react.mjs'
         customElements.define('example-counter-react', ExampleCounterReact)
-        import { ExampleCounterMithril } from '/components/example-counter-mithril.mjs'
-        customElements.define('example-counter-mithril', ExampleCounterMithril)
-        import { ExampleCounterVue } from '/components/example-counter-vue.mjs'
-        customElements.define('example-counter-vue', ExampleCounterVue)
+
+        const iframe = cr('iframe')
+        iframe.onload = function () {}
+        document.body.appendChild(iframe)
       </script>
       <example-counter-react></example-counter-react>
       <example-counter-mithril></example-counter-mithril>
