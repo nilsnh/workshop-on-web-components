@@ -19,6 +19,10 @@
       type="font/ttf"
       crossorigin
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline' unpkg.com jspm.dev *.jspm.org cdn.skypack.dev; img-src * data: ; child-src 'self';"
+    />
   </head>
   <body>
     <site-menu></site-menu>
@@ -104,11 +108,19 @@
 
       <some-hints>
         <ul>
-          <li>You can create a free account on <a href="https://www.netlify.com/">Netlify</a> to deploy the site.</li>
-          <li>For a basic benchmarking you can use <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> which comes built into Chrome.</li>
+          <li>
+            You can create a free account on
+            <a href="https://www.netlify.com/">Netlify</a> to deploy the site.
+          </li>
+          <li>
+            For a basic benchmarking you can use
+            <a href="https://developers.google.com/web/tools/lighthouse/"
+              >Lighthouse</a
+            >
+            which comes built into Chrome.
+          </li>
         </ul>
       </some-hints>
-
     </main>
     <site-footer></site-footer>
   </body>

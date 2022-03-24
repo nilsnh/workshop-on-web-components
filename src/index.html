@@ -19,6 +19,10 @@
       type="font/ttf"
       crossorigin
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline' unpkg.com jspm.dev *.jspm.org cdn.skypack.dev; img-src * data: ; child-src 'self';"
+    />
   </head>
   <body>
     <noscript>
@@ -45,8 +49,14 @@
 
         <ol>
           <li>Web components let's us create custom, reusable HTML tags.</li>
-          <li>It's a browser built-in, meaning it's available in all major browsers.</li>
-          <li>This knowledge will is appliable within, across and even without web frameworks.</li>
+          <li>
+            It's a browser built-in, meaning it's available in all major
+            browsers.
+          </li>
+          <li>
+            This knowledge will is appliable within, across and even without web
+            frameworks.
+          </li>
         </ol>
       </main>
       <site-footer></site-footer>
