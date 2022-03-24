@@ -2,6 +2,7 @@ import { cr } from '/html-builder.mjs'
 
 const css = `
   .outer {
+    margin: 5rem 0;
     border: 1rem solid #65282b ;
     padding: 2rem;
     background-color: #e4d4cc;
