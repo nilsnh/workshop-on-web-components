@@ -9,6 +9,22 @@ export class Powerpointer3000 extends HTMLElement {
     this.render()
   }
 
+  static get observedAttributes() {
+    return ['slide-number']
+  }
+
+  get slideNum() {
+    return Number.parseInt(this.getAttribute('slide-number'), 10)
+  }
+
+  set slideNum(number) {
+    this.setAttribute('slide-number', number)
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render()
+  }
+
   render() {
     if (this.spanWithSlideNum) {
       this.spanWithSlideNum.innerHTML = this.slideNum
