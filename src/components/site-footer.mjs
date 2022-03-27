@@ -20,6 +20,9 @@ template.innerHTML = html`
       under a
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
         >Creative Commons Attribution-ShareAlike 4.0 International License</a
+      >. You can find
+      <a href="https://github.com/nilsnh/workshop-on-web-components"
+        >the code behind this workshop here</a
       >.
     </p>
     <p>
