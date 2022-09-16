@@ -7,7 +7,7 @@ A workshop on how to use web components without a bundler.
 1. Download this repository.
 1. Install [Node.js](https://nodejs.org/en/).
 1. Run `npm install` to install dependencies.
-1. Run `npm start` to start the livereload server.
+1. Run `npm run start` to start the livereload server.
 
 ## For deployment
 
